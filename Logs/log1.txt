@@ -1,0 +1,16 @@
+[yesterdays log, written today in 9/9/2025]
+So I was looking for some electronics project ideas to be done in a day (oops more than a day already, he he).
+After some thinking and useless generic ideas by ChatGPT, I decided to do an electrical telegraph machine that would both produce and decode the morse code it generated.
+first aim was to complete the circuit.
+I knew I had to use a button so I started by learning how they work (I'm yet to find a reason why they have four legs instead of just two. It seems to me redundent in all cases except a select few).
+I tried some testing and got the hang of using a button to recieve an electrical signal. I made a basic circuit that if the button was pressed, it would pass some electricity to a pin and arduino would recognise it and let me know. 
+that basic idea was kept and I just kept adding on.
+the next step was an LED and I almost went crazy over not being able to light it up. Turns out the sides of the breadboard (you know the blue and red lines thats supposed to be power and ground) was split in the middle. Rookie mistake ha ha (almost lost my mind contemplating the philosophical implications of electricity not flowing)
+I later added a buzzer.
+I tried different combinations of resistors but the buzzer was too loud so it defo needed a strong resitor. But with a strong resistor, the LED was too dim even if I put it at the front. Turns out LEDs are current dependent not voltage, who knew. So instead of putting them in series, I put the LED and the buzzer in parallel with each their own resistor.
+With the circuit complete I tackled software.
+Left it so that short presses (less than 1 base unit) produces a dot and long presses (more than 1 base unit, less than 3xbase unit) produces a dash on the serial monitor.
+It also tracks pause time and if it is more than 3xbase unit, it concludes the letter.
+All these relative ratios of dot, dash and pause times are straight from the morse code standards. But the base time unit itself is ambiguous.
+After some experimentation, I left the base unit as 150ms. It produces somewhat of an accurate result. But its not the ultimate solution.
+The next big thing is to solve this issue.

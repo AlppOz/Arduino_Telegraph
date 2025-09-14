@@ -1,0 +1,12 @@
+The issue is too big.
+With the current 150ms configuration, the morse code as read on the serial is accurate only about half of the time.
+The thing is we are all human. Not every dot I press is below 150ms nor it is guarenteed to be with any one 'correct' base unit.
+The problem is even worse with other people in mind. I had my dad a go with the set-up and he had a worse time producing his intended morse code. After all, the provisional 150ms value was determined with my testing.
+What consitutes a dot, or a dash. One exact time unit? Obviously not. If it can't be time related then the relative ratios are also not to be trusted with. These are fundemental observations to the problem.
+The reality is, and this is from basic research only, the telegraphs had a human listener on the other end. The reciever would decode the message not by counting the time of each dot or dash, but instead by listening the intent.
+Back in the ol' days ahh, I know. But how do you tell a computer to listen to intent?
+Maybe machine learning where I correct it as it learns until it is good enough? Nah, too much time and effort (trust me bro the project will take a day max)
+Perhaps it count the time, but instead of looking for a specific threshold, it compares what its working with between each pressing?
+So back at the ratios we go. Not too happy with that as it still has some of the time issues leaking in. A certain dash will never be exactly 3 times the time it takes of a certain dot. So again, you need to specify a range to work with which is precicely the cause of the problem as is.
+Suddenly the machine learning option doesn't sound so tedious after all.
+Anyways I spend the whole day writing these logs that noone will read intead of doing the real work. I'll think about it later.
